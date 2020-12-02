@@ -48,4 +48,10 @@ class News_model extends CI_Model{
 
 		return $this->db->update('news',$formdata);
 	}
+
+	public function deleted($id)
+	{
+		$this->db->where('id',$id);
+		return $this->db->delete('news');
+	}
 }

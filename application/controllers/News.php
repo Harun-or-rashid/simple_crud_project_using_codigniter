@@ -74,7 +74,7 @@ class News extends CI_Controller{
 			echo "ERROR"; die();
 		}else{
 			$this->News_model->newsUpdate($id);
-			$data['title']="Update Form";
+			redirect('news');
 		}
 
 
@@ -82,6 +82,14 @@ class News extends CI_Controller{
 //		$this->load->model('News_model');
 //		$data['news']=$this->News_model->newsUpdate($id,$formdata);
 
-		//redirect('news');
+
+	}
+
+	public function delete($id)
+	{
+		$this->load->model('News_model');
+		$this->News_model->deleted($id);
+		redirect('news');
+
 	}
 }

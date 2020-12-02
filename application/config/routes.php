@@ -56,3 +56,4 @@ $route['news']='news/index';
 $route['news/create']='news/create';
 $route['news/edit/(:any)']='news/edit/$1';
 $route['news/update']='news/update';
+$route['news/delete']='news/delete';

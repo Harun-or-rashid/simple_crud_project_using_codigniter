@@ -27,7 +27,7 @@
 				<td><?php echo $data->slug ?></td>
 				<td><?php echo $data->text ?></td>
 				<td><a href="<?php echo base_url('index.php/news/edit/'.$data->id)?>" class="btn fa fa-edit text-warning">Edit</a>||
-				<a href="<?php echo base_url('index.php/news/create')?>" class="btn fa fa-trash-o text-danger">Delete</a></td>
+				<a href="<?php echo base_url('index.php/news/delete/'.$data->id)?>" class="btn fa fa-trash-o text-danger">Delete</a></td>
 
 			</tr>
 			<?php endforeach; ?>
