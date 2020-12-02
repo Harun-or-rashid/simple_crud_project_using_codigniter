@@ -15,7 +15,7 @@
 
 <div class="container">
 <?php //var_dump($news); ?>
-	<form	class="form-group"  <?php echo form_open('news/update'); ?>
+	<?php echo form_open('news/update/'.$news['id']); ?>
 	<?php if($this->session->flashdata('msg')): ?>
 		<p style="background:limegreen;"><?php echo $this->session->flashdata('msg'); ?></p>
 	<?php endif; ?>

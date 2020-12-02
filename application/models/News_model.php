@@ -32,4 +32,20 @@ class News_model extends CI_Model{
 		return $news->row_array();
 
 	}
+
+	public function newsUpdate($id)
+	{
+
+		$this->db->where('id',$id);
+		$this->load->helper('url');
+		$slug=url_title($this->input->post('title'),'dash',TRUE);
+		$formdata=array(
+			'title'=>$this->input->post('title'),
+			'slug'=>$slug,
+			'text'=>$this->input->post('text')
+		);
+
+
+		return $this->db->update('news',$formdata);
+	}
 }
