@@ -23,4 +23,13 @@ class News_model extends CI_Model{
 		);
 		return $this->db->insert('news',$data);
 	}
+
+	public function news($id)
+	{
+		$this->db->where('id',$id);
+
+			$news=$this->db->get('news');
+		return $news->row_array();
+
+	}
 }

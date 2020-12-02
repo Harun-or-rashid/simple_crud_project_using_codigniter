@@ -43,4 +43,18 @@ class News extends CI_Controller{
 		}
 
 	}
+
+	public function edit($id)
+	{
+		$this->load->helper('form');
+		$this->load->library('session');
+		$this->load->library('form_validation');
+		$data['title']="Update Form";
+
+		$this->load->model('News_model');
+		$data['news']=$this->News_model->news($id);
+		$this->load->view('templates/header',$data);
+		$this->load->view('news/edit',$data);
+		$this->load->view('templates/footer',$data);
+	}
 }
