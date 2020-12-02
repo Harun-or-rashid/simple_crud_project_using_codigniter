@@ -11,20 +11,35 @@
 </head>
 <body>
 <div class="container">
-	<h4>All News</h4>
+	<h4 class="">All News</h4>
 	<div class="table">
-		<table>
-			<th>
+		<table class="table table-hover col-md-8">
+			<tr>
+				<th>Title</th>
+				<th>Slug</th>
+				<th>Content</th>
+				<th>Action</th>
+			</tr>
+			<?php foreach ($news as $data):?>
+			<tr>
 
-			</th>
+				<td><?php echo $data->title ?></td>
+				<td><?php echo $data->slug ?></td>
+				<td><?php echo $data->text ?></td>
+				<td><a href="<?php echo base_url('index.php/news/create')?>" class="btn fa fa-edit text-warning">Edit</a>||
+				<a href="<?php echo base_url('index.php/news/create')?>" class="btn fa fa-trash-o text-danger">Delete</a></td>
+
+			</tr>
+			<?php endforeach; ?>
+
 		</table>
 	</div>
-<!--	--><?php //var_dump($news); ?>
-	<?php foreach ($news as $new):?>
-	<h5><?php echo $new->title ?></h5>
-	<h5><?php echo $new->slug ?></h5>
-	<h5><?php echo $new->text ?></h5>
-<?php endforeach;	?>
+<!--<!--	-->--><?php ////var_dump($news); ?>
+<!--	--><?php //foreach ($news as $new):?>
+<!--	<h5>--><?php //echo $new->title ?><!--</h5>-->
+<!--	<h5>--><?php //echo $new->slug ?><!--</h5>-->
+<!--	<h5>--><?php //echo $new->text ?><!--</h5>-->
+<?php //endforeach;	?>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
