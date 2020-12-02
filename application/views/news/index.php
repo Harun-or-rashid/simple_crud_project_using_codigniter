@@ -34,12 +34,7 @@
 
 		</table>
 	</div>
-<!--<!--	-->--><?php ////var_dump($news); ?>
-<!--	--><?php //foreach ($news as $new):?>
-<!--	<h5>--><?php //echo $new->title ?><!--</h5>-->
-<!--	<h5>--><?php //echo $new->slug ?><!--</h5>-->
-<!--	<h5>--><?php //echo $new->text ?><!--</h5>-->
-<?php //endforeach;	?>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
