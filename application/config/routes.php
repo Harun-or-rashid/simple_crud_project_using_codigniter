@@ -5,6 +5,9 @@ $route['home'] = 'pages/view';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//Auth Routes
+$route['login']='auth/login';
+
 //User Route
 $route['user']='user/index';
 $route['user/create']='user/create';
