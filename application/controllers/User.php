@@ -3,8 +3,19 @@ class User extends CI_Controller{
 
 	public function __construct()
 	{
+
 		parent::__construct();
+		$this->load->library('session');
+		if (isset($_SESSION['user_logged'])){
+			$this->session->set_flashdata('error',"please check email and password");
+			redirect('auth/login');
+		}
 //		$this->load->library(library,array('encrypt','form_validation'));
+	}
+
+	public function profile()
+	{
+		$this->load->view('user/profile');
 	}
 
 	public function index()

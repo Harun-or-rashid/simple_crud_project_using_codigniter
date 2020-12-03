@@ -28,7 +28,7 @@ class News_model extends CI_Model{
 	{
 		$this->db->where('id',$id);
 
-			$news=$this->db->get('news');
+		$news=$this->db->get('news');
 		return $news->row_array();
 
 	}

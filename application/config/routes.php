@@ -11,6 +11,7 @@ $route['login']='auth/login';
 //User Route
 $route['user']='user/index';
 $route['user/create']='user/create';
+$route['user/profile']='user/profile';
 
 //News Route
 $route['news']='news/index';
