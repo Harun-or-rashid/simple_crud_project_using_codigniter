@@ -66,4 +66,12 @@ class User extends CI_Controller{
 			redirect('user/create');
 		}
 	}
+
+	public function upload_image()
+	{
+		$this->form_validation->set_rules('image','Image','required');
+		$this->load->view('users/profile');
+
+
+	}
 }

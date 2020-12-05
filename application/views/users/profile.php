@@ -10,11 +10,16 @@
 	<title>Document</title>
 </head>
 <body>
-
-<?php //echo validation_errors(); ?>
-
 <div class="container">
+	<form action="user/image_upload" class="form-group mt-5" enctype="multipart/form-data">
+		<div class="col-md-5 ">
+			<label for="title">Upload Image</label>
+			<input type="file"  class="form-control fa-file" name="image" /><br />
+			<?php echo form_error('image'); ?>
+			<input type="submit" class="col-md-2 btn btn-info" value="Upload">
 
+		</div>
+	</form>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

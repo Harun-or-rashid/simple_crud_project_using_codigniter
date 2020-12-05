@@ -1,9 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['home'] = 'pages/view';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['home'] = 'auth/login';
+
 
 //Auth Routes
 $route['login']='auth/login';
@@ -19,3 +18,5 @@ $route['news/create']='news/create';
 $route['news/edit/(:any)']='news/edit/$1';
 $route['news/update']='news/update';
 $route['news/delete']='news/delete';
+
+$route['image']='user/upload_image';
